@@ -56,8 +56,7 @@ tail -F /app/apache/logs/error_log &
 tail -F /app/apache/logs/access_log &
 export LD_LIBRARY_PATH=/app/php/ext
 export PHP_INI_SCAN_DIR=/app/www
-php/bin/pear install mail
-php/bin/pear install Net_SMTP
+php/bin/pear install Net_FTP
 echo "Launching apache"
 exec /app/apache/bin/httpd -DNO_DETACH
 EOF
